@@ -1,0 +1,154 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.modal-overlay .products-modal {
+  max-width: 850px;
+  height: 450px;
+  z-index: 50;
+  background-color: #fefefe;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  transform-origin: center;
+  transition: transform 100ms ease-in-out;
+  display: flex;
+  justify-content: center;
+}
+.modal-overlay .products-modal .img-box {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  background-color: #111;
+  border-radius: 10px 0 0 10px;
+}
+.modal-overlay .products-modal .img-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.modal-overlay .products-modal .products-details {
+  position: relative;
+  padding: 1rem;
+  width: 60%;
+  height: 100%;
+}
+.modal-overlay .products-modal .products-details .close-btn {
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+  border-radius: 50%;
+  background-color: #111;
+  border: 1px solid #fff;
+}
+.modal-overlay .products-modal .products-details .close-btn i {
+  padding: 6px 10px;
+  color: #fefefe;
+  font-size: 1.3rem;
+}
+.modal-overlay .products-modal .products-details .product-desc {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.modal-overlay .products-modal .products-details .product-rate {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.modal-overlay .products-modal .products-details .product-rate div {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+.modal-overlay .products-modal .products-details .product-rate div i {
+  font-size: 0.9rem;
+}
+.modal-overlay .products-modal .products-details .product-rate div i.fa-sharp {
+  color: rgb(253, 236, 0);
+}
+.modal-overlay .products-modal .products-details .product-rate .rate {
+  font-size: 0.9rem;
+}
+.modal-overlay .products-modal .products-details .product-price {
+  display: block;
+  font-size: 2rem;
+  color: var(--primary-color);
+  font-family: var(--primary-font);
+  font-weight: 800;
+  padding: 1rem 0;
+}
+.modal-overlay .products-modal .products-details .product-price i {
+  font-size: 1.5rem;
+}
+.modal-overlay .products-modal .products-details .quantity {
+  padding: 2rem 0;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.modal-overlay .products-modal .products-details .quantity .btns {
+  display: flex;
+  gap: 5px;
+}
+.modal-overlay .products-modal .products-details .quantity .btns span {
+  padding: 0.3rem 0.5rem;
+  background-color: rgb(216, 216, 216);
+}
+.modal-overlay .products-modal .products-details .quantity .btns span:nth-child(2) {
+  width: 50px;
+  text-align: center;
+  background-color: rgba(201, 201, 201, 0.25);
+}
+.modal-overlay .products-modal .products-details .modal-btns {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+.modal-overlay .products-modal .products-details .modal-btns button {
+  padding: 0.8rem 2rem;
+  border: none;
+  outline: none;
+  color: #fefefe;
+}
+.modal-overlay .products-modal .products-details .modal-btns button:first-child {
+  background-color: var(--primary-color);
+}
+.modal-overlay .products-modal .products-details .modal-btns button:last-child {
+  background-color: var(--secondary-color);
+}
+@media (max-width: 767px) {
+  .modal-overlay .products-modal {
+    z-index: 200;
+    height: 100vh;
+    flex-direction: column;
+  }
+  .modal-overlay .products-modal .img-box,
+  .modal-overlay .products-modal .products-details {
+    width: 100%;
+    border-radius: 0;
+  }
+  .modal-overlay .products-modal .products-details {
+    position: static;
+    overflow-y: auto;
+  }
+  .modal-overlay .products-modal .products-details .close-btn {
+    top: 1rem;
+    right: 0.5rem;
+  }
+  .modal-overlay .products-modal .products-details .product-desc {
+    font-size: 1rem;
+  }
+  .modal-overlay .products-modal .products-details .modal-btns {
+    position: static;
+  }
+}/*# sourceMappingURL=modal.css.map */
