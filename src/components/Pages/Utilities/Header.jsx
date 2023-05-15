@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
-import { Link, Navigate, useNavigate } from "react-router-dom";
-import profile from "../../../assets/images/profile.jpeg";
-import DropDownMenu from "./DropDownMenu";
+import { Link, useNavigate } from "react-router-dom";
 const Header = () => {
   const [searchBarActive, setSearchBarActive] = useState(false);
   const [sideMenuActive, setSideMenuActive] = useState(false);
@@ -58,14 +56,14 @@ const Header = () => {
 
           <span>{cartItems.length}</span>
         </div>
-        {/* <div className="user">
+        <div className="user">
           <button type="button" className="btn login-btn">
             <Link to="/login">LOGIN</Link>
           </button>
           <button type="button" className="btn signin-btn">
             <Link to="/signin">SIGN IN</Link>
           </button>
-        </div> */}
+        </div>
         <div
           className="toggle-menu"
           onClick={() => setSideMenuActive(!sideMenuActive)}
@@ -77,7 +75,7 @@ const Header = () => {
           )}
         </div>
         {/* <SideMenu /> */}
-        <div className={`account  ${dropDownMenu ? "active" : ""}`}>
+        {/* <div className={`account  ${dropDownMenu ? "active" : ""}`}>
           <div
             className="user-profile"
             onClick={() => setDropDownMenu(!dropDownMenu)}
@@ -92,7 +90,7 @@ const Header = () => {
           </div>
 
           <DropDownMenu />
-        </div>
+        </div> */}
       </div>
     </header>
   );
